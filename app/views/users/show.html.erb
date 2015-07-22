@@ -1,1 +1,10 @@
 <h1> <%= "#{@user.name}'s todo list" %></h1>
+
+
+<div class='col-md-8 pull-left'>
+  <%= render partial: 'items/form' %>
+</div>
+ 
+ <div id="items" class='items list-group col-md-8 pull-left'>
+    <%= render @items %>
+</div>
