@@ -1,10 +1,2 @@
-<%= content_tag :div, class: 'media', id: "item-#{item.id}" do %>
-<% if item.name %>
-  <div class="row">
-    <p>
-    <div class="col-md-6"><%= item.name %></div>
-    
-  </p>
-  </div>   
-<% end %>
-<% end %>
+<p><%= item.name %> <small><%= item.completed ? "Completed" : "Pending" %></small></p>
+<%= link_to "Toggle", user_item_complete_path(current_user, item), method: :put, class: 'btn btn-success btn-xs' %>

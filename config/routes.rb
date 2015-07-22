@@ -3,12 +3,14 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users, only: [:show] do 
-  resources :items, only: [:create]
+    resources :items, only: [:create] do
+      put :complete
+    end
   end
 
-  authenticated :user do
-     root to: 'users#show', as: :authenticated_root
-  end 
+  # authenticated :user do
+  #    root to: 'users#show', as: :authenticated_root
+  # end 
 
   root to: 'welcome#index'
 
