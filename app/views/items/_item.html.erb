@@ -1,4 +1,4 @@
 <p><%= item.name %> <small><%= item.completed ? "Completed" : "Pending" %></small></p>
 <%= link_to "Toggle", user_item_complete_path(current_user, item), method: :put, class: 'btn btn-success btn-xs' %>
 
-<%= link_to "", [user,item], method: :delete, remote: true, class: 'glyphicon glyphicon-remove', data: {confirm: 'Are you sure?' } %>
+<%= link_to "Delete", [current_user, item], method: :delete, class: 'btn btn-success btn-xs' %>

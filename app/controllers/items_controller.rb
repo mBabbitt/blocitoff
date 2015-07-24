@@ -23,20 +23,18 @@ class ItemsController < ApplicationController
   end
 
    def destroy
-    @item = Item.find(params[:item_id])
-    @user = @item.user
-    authorize @item
+    @item = Item.find(params[:id])
     if @item.destroy
-      flash[:notice] = "Item deleted successfully."
+      flash[:notice] = "Item deleted successuflly!"
     else
-      flash[:error] = "There was an error deleting item."
+      flash[:notice] = "Something went wrong, try again please"
     end
 
     respond_to do |format|
-      format.html
-      format.js {render :nothing => true}
+      format.html { redirect_to current_user }
+      format.js
     end
-    
+  end
   
   private
 

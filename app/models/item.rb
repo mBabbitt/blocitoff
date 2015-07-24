@@ -4,6 +4,6 @@ class Item < ActiveRecord::Base
   default_scope { order('updated_at ASC') }
 
   validates :user, presence: true
-  validates :name, length: {minimum: 5}, presence: true
+  validates :name, length: {minimum: 2}, presence: true
 
 end
