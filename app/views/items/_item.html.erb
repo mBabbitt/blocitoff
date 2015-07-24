@@ -2,3 +2,6 @@
 <%= link_to "Toggle", user_item_complete_path(current_user, item), method: :put, class: 'btn btn-success btn-xs' %>
 
 <%= link_to "Delete", [current_user, item], method: :delete, class: 'btn btn-success btn-xs' %>
+
+ <div class="text-center-small">
+<%= item.days_left.to_s. + " days left to complete"  %>
