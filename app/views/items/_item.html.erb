@@ -1,7 +1,8 @@
-<p><%= item.name %> <small><%= item.completed ? "Completed" : "Pending" %></small></p>
+<p class="text-capitalize"><strong><%= item.name %> </strong><small><%= item.completed ? "Completed" : "Pending" %></small></p>
 <%= link_to "Toggle", user_item_complete_path(current_user, item), method: :put, class: 'btn btn-success btn-xs' %>
 
-<%= link_to "Delete", [current_user, item], method: :delete, class: 'btn btn-success btn-xs' %>
+<%= link_to "Delete", [current_user, item], method: :delete, class: 'btn btn-danger btn-xs' %>
 
- <div class="text-center-small">
-<%= item.days_left.to_s. + " days left to complete"  %>
+<p class="text-muted">
+ <%= item.days_left.to_s. + " days left to complete"  %>
+</p>

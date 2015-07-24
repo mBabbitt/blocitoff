@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blocitoff</title>
+  
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -10,7 +10,7 @@
 <body>
   <div class="container">
   <ul class="nav nav-tabs">
-    <h1><%= link_to "Blocitoff", root_path %></h1>
+    
     <div class="pull-right user-info">
       <% if current_user %>
          Hello <%= link_to (current_user.name || current_user.email), edit_user_registration_path %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
