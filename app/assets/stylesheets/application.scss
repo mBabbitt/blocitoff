@@ -1,5 +1,29 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  background-image: image-url('alarm.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.title {
+  font-size: 72px;
+  color: #AAAF8E;
+  text-align: center;
+}
+
+.small {
+  font-size: 42px;
+  color: #AAAF8E;
+  text-align: center;
+}
+
+.subtext {
+  font-size: 22px;
+  color: #AAAF8E;
+  text-align: center;
+  }
+  
 .user-info {
    margin-top: 9px;
  }
