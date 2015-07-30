@@ -1,3 +1,6 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 col-md-offset-4">
  <%= form_for [current_user, Item.new] do |f| %>
       <div class='form-group'>
         <%= f.label :Item %>
@@ -7,3 +10,6 @@
         <%= f.submit 'Save', class: 'btn btn-primary' %>
       </div>
     <% end %>
+  </div>
+</div>
+</div>
