@@ -1,12 +1,13 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4 col-md-offset-6">
-<p class="text-capitalize text-info "><strong><%= item.name %> </strong><small><%= item.completed ? "Completed" : "Pending" %></small></p>
+<p class="text-capitalize edit "><strong><%= item.name %> </strong><small><%= item.completed ? "Completed" : "Pending" %></small></p>
 <%= link_to "Toggle", user_item_complete_path(current_user, item), method: :put, class: 'btn btn-success btn-xs' %>
 
 <%= link_to "Delete", [current_user, item], method: :delete, class: 'btn btn-danger btn-xs' %>
+</p>
 
-<p class="text-info">
+<p class="form-text">
  <%= item.days_left.to_s. + " days left to complete"  %>
 </p>
     </div>
